@@ -3,16 +3,16 @@
 
 echo "INSTALLING LIBS"
 echo ""
-apt-get update 
-apt install tmux
-apt install git
-apt install curl
-apt-get install xdotool
+apt-get -y update 
+apt install -y tmux
+apt install -y git
+apt install -y curl
+#apt-get install xdotool
 
 
 echo "INSTALLING PYTHON"
 echo ""
-apt-get install python3
+apt-get install -y python3
 
 echo "TMUX PLUGIN MANAGER"
 echo ""
@@ -25,7 +25,7 @@ python3 moveconf.py
 
 echo "INSTALLING ZSH AND POWERSHELL"
 echo ""
-apt install zsh
+apt install -y zsh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 python3 newtheme.py
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
