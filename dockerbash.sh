@@ -4,6 +4,8 @@ apt-get update
 apt install tmux
 apt install git
 apt install curl
+apt-get install xdotool
+
 
 echo "INSTALLING PYTHON"
 echo ""
@@ -24,5 +26,10 @@ apt install zsh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 zsh 
+xdotool key y
+xdotool key y
+xdotool key n
+xdotool key n
+xdotool key n
 echo "INSTALLATION COMPLETED!"
 
