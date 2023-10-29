@@ -1,0 +1,25 @@
+import os
+
+# Specify the file path with ~
+file = "~/.zshrc"
+
+# Expand the ~ to the full home directory path
+file_path = os.path.expanduser(file)
+
+# Define the line to search for and the replacement text
+search_line = '"ZSH_THEME="robbyrussel"'
+replacement_text = 'ZSH_THEME="powerlevel10k/powerlevel10k"'
+
+# Read the file and store its lines in a list
+with open(file_path, 'r') as file:
+    lines = file.readlines()
+
+# Find the line to replace and update it
+for i, line in enumerate(lines):
+    if search_line in line:
+        lines[i] = replacement_text + '\n'
+
+# Write the modified lines back to the file
+with open(file_path, 'w') as file:
+    file.writelines(lines)
+
